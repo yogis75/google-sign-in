@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>signinApp</title>
   </head>
   <body>
     <div id="signin-button"></div>
-    <button onclick="signOut()">Sign out</button>
+    <div class="user-wrapper">
+      <div class="user-info"></div>
+      <button onclick="signOut()">Sign out</button>
+    </div>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="./script.js"></script>
   </body>

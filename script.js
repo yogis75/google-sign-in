@@ -1,6 +1,15 @@
+var googleButton = document.getElementById("signin-button");
+var userInfo = document.getElementById("user-info");
+var userWrapper = document.getElementById("user-wrapper");
+
 function handleCredentialResponse(response) {
   var responsePayload = decodeJwtResponse(response.credential);
-  console.log(responsePayload);
+  var userdata = `<img src=${responsePayload.picture} alt="">
+  <p>Name: ${responsePayload.name}</p>
+  <p>Email: ${responsePayload.email}</p>`;
+  userInfo.innerHTML = userdata;
+  userWrapper.style.display = "block";
+  googleButton.style.display = "none";
 }
 
 window.onload = function () {
@@ -11,8 +20,8 @@ window.onload = function () {
   });
 
   google.accounts.id.renderButton(
-    document.getElementById("signin-button"),
-    { theme: "outline", size: "medium" } // customization attributes
+    googleButton,
+    { theme: "filled_blue", size: "medium", width: 200 } // customization attributes
   );
   google.accounts.id.prompt(); // also display the One Tap dialog
 };

@@ -4,7 +4,7 @@ var userWrapper = document.querySelector(".user-wrapper");
 
 function handleCredentialResponse(response) {
   var responsePayload = decodeJwtResponse(response.credential);
-  var userdata = `<img src=${responsePayload.picture} alt="">
+  var userdata = `<img class="profile-img" src=${responsePayload.picture} alt="">
   <p>Name: ${responsePayload.name}</p>
   <p>Email: ${responsePayload.email}</p>`;
   userInfo.innerHTML = userdata;

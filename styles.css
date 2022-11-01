@@ -14,9 +14,17 @@ html {
   top: 10px;
 }
 
+.profile-img {
+  border-radius: 50px;
+}
+
 .user-wrapper {
   display: none;
   text-align: center;
   height: 500px;
   margin-top: 200px;
+}
+
+.user-wrapper p {
+  padding-block: 10px;
 }

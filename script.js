@@ -1,6 +1,6 @@
 var googleButton = document.getElementById("signin-button");
-var userInfo = document.getElementById("user-info");
-var userWrapper = document.getElementById("user-wrapper");
+var userInfo = document.querySelector(".user-info");
+var userWrapper = document.querySelector(".user-wrapper");
 
 function handleCredentialResponse(response) {
   var responsePayload = decodeJwtResponse(response.credential);
